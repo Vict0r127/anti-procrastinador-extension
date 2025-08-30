@@ -1,0 +1,68 @@
+:root{
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --border:#e6eaf0;
+  --primary:#007bff;
+  --primary-press:#0062cc;
+}
+
+*{ box-sizing:border-box; }
+html,body{
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--text);
+  font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  width:360px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+  margin:10px;
+  padding:12px;
+  border:1px solid var(--border);
+}
+
+.header{ display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+.brand{ display:flex; align-items:center; gap:8px; font-weight:600; }
+.logo{ width:20px; height:20px; border-radius:4px; }
+
+.timer{ margin-top:4px; padding:10px; border:1px solid var(--border); border-radius:10px; background:#fff; }
+#time{ font-size:42px; font-weight:700; text-align:center; margin:6px 0 8px; letter-spacing:1px; }
+.controls{ display:flex; gap:8px; justify-content:center; margin-bottom:8px; }
+.duration{ display:flex; gap:8px; justify-content:center; align-items:center; }
+
+.btn{
+  border:1px solid var(--border);
+  background:#fff;
+  padding:8px 12px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:transform .06s ease, box-shadow .12s ease, background .12s ease;
+  box-shadow:0 2px 0 rgba(0,0,0,.04);
+}
+.btn:hover{ transform:translateY(-1px); }
+.btn:active{ transform:translateY(0); box-shadow:none; }
+.btn.primary{ background:var(--primary); color:#fff; border-color:transparent; }
+.btn.primary:active{ background:var(--primary-press); }
+.btn.ghost{ background:#f9fafb; }
+.btn.small{ padding:6px 8px; font-size:13px; }
+
+.duration input{ width:64px; padding:6px 8px; border-radius:8px; border:1px solid var(--border); text-align:center; }
+
+.blocked{ margin-top:12px; }
+.blocked h3{ margin:8px 0; font-size:15px; }
+.blocked-actions{ display:flex; gap:8px; align-items:center; }
+.blocked-actions input{ flex:1; padding:8px; border:1px solid var(--border); border-radius:8px; }
+
+.sites-list{ list-style:none; padding:0; margin:8px 0 0; max-height:120px; overflow:auto; }
+.sites-list li{ display:flex; justify-content:space-between; gap:8px; padding:6px 8px; border-radius:8px; align-items:center; background:#fafafa; margin-bottom:6px; border:1px solid var(--border); }
+.sites-list .domain{ font-size:13px; color:var(--text); }
+.sites-list button { padding:6px 8px; font-size:12px; }
+
+.note{ margin-top:10px; padding-top:8px; border-top:1px dashed var(--border); }
+.muted{ color:var(--muted); font-size:12px; }

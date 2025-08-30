@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "AntiProcrastinator",
+  "version": "1.0.0",
+  "description": "Extensão para focar: timer Pomodoro + bloqueio de sites configurável.",
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AntiProcrastinator"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
+
+

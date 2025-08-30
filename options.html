@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Opções — AntiProcrastinator</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body{ width:700px; }
+    .options{ padding:18px; }
+    .list{ margin-top:12px; }
+  </style>
+</head>
+<body>
+  <div class="card options">
+    <h2>Configurações</h2>
+    <section>
+      <h3>Sites bloqueados</h3>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <input id="optNewSite" placeholder="ex: facebook.com" style="flex:1;padding:8px;border-radius:8px;border:1px solid #e6eaf0;">
+        <button id="optAdd" class="btn">Adicionar</button>
+        <button id="optSaveAll" class="btn ghost">Salvar lista manual</button>
+      </div>
+      <ul id="optList" class="sites-list list"></ul>
+    </section>
+
+    <section style="margin-top:16px;">
+      <h3>Timer</h3>
+      <p class="muted">Ajuste padrão de minutos do Pomodoro:</p>
+      <input id="optDefaultMinutes" type="number" min="1" value="25" style="width:80px;padding:6px;border-radius:6px;border:1px solid #e6eaf0;">
+      <button id="optApplyDefault" class="btn small">Aplicar</button>
+    </section>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

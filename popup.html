@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AntiProcrastinator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <header class="header">
+      <div class="brand">
+        <img src="icon.png" alt="" class="logo">
+        <span>AntiProcrastinator</span>
+      </div>
+    </header>
+
+    <main>
+      <div class="timer">
+        <div id="time">25:00</div>
+        <div class="controls">
+          <button id="start" class="btn primary">Start</button>
+          <button id="pause" class="btn">Pause</button>
+          <button id="reset" class="btn ghost">Reset</button>
+        </div>
+
+        <div class="duration">
+          <label for="minutes">Minutos:</label>
+          <input id="minutes" type="number" min="1" max="180" value="25">
+          <button id="apply" class="btn small">Aplicar</button>
+        </div>
+      </div>
+
+      <section class="blocked">
+        <h3>Sites bloqueados</h3>
+        <div class="blocked-actions">
+          <input id="newSite" placeholder="ex: facebook.com" />
+          <button id="addSite" class="btn small">Adicionar</button>
+          <button id="openOptions" class="btn small ghost">Opções</button>
+        </div>
+        <ul id="sitesList" class="sites-list"></ul>
+      </section>
+
+      <section class="note">
+        <p class="muted">Use as Opções para gerenciar a lista completa. Bloqueio aplica-se às abas principais (página completa).</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
